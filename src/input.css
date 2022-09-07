@@ -18,10 +18,14 @@
     [type='password'],
     [type='number'],
     [type='tel'] {
-        @apply mt-0.5 w-full rounded-md border-gray-300 shadow-sm invalid:border-red-500 invalid:placeholder-shown:border-gray-300 focus:border-indigo-500 focus:ring-indigo-500;
+        @apply mt-0.5 w-full rounded-md border-gray-300 shadow-sm invalid:border-red-500 invalid:placeholder-shown:border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500;
     }
 
     label {
         @apply text-sm font-medium text-gray-700;
+    }
+
+    svg {
+        @apply stroke-red-500 stroke-2;
     }
 }
