@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'norse';
+    src: url('../fonts/norse-bold-webfont.woff2') format('woff2'),
+        url('../fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+@layer base {
+    [type='text'],
+    [type='email'],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='tel'] {
+        @apply mt-0.5 w-full rounded-md border-gray-300 shadow-sm invalid:border-red-500 invalid:placeholder-shown:border-gray-300 focus:border-indigo-500 focus:ring-indigo-500;
+    }
+
+    label {
+        @apply text-sm font-medium text-gray-700;
+    }
+}
