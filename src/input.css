@@ -26,6 +26,6 @@
     }
 
     svg {
-        @apply stroke-red-500 stroke-2;
+        @apply stroke-[#301bc1] stroke-2;
     }
 }
