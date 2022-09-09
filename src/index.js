@@ -1,38 +1,35 @@
-// const form = document.querySelector('form'); // todo: handle form submit
+const form = document.forms.form;
 
-const passwordInput = document.getElementById('password');
-const passWordInputConfirm = document.getElementById('confirm-password');
+const password = form.elements['password'];
+const passwordShow = document.querySelector('.password-show');
+const passwordConfirm = form.elements['password-confirm'];
+const passwordConfirmShow = document.querySelector('.password-confirm-show');
 
-const passwordShow = document.querySelectorAll('.password-show');
-const passwordHide = document.querySelectorAll('.password-hide');
-
-passwordShow.forEach(button => {
-    button.addEventListener('pointerdown', togglePassword);
-});
-
-passwordHide.forEach(button => {
-    button.addEventListener('pointerdown', togglePassword);
-});
-
-function togglePassword(event) {
-    // console.log(event.target.closest('input')); // null
-    // might need to adjust html or choose closes based on click
-    if (event.target.type === 'password') {
-        event.target.type = 'text';
-        // todo: change svg
-    } else {
-        event.target.type = 'password';
-        // todo: change svg
-    }
-}
-
-passwordInput.addEventListener('input', validatePassword);
-passWordInputConfirm.addEventListener('submit', validatePassword);
+password.addEventListener('input', validatePassword);
+passwordConfirm.addEventListener('input', validatePassword);
 
 function validatePassword(event) {
-    if (passwordInput.value !== passWordInputConfirm.value) {
-        passWordInputConfirm.setCustomValidity('Passwords do not match!');
+    if (password.value === passwordConfirm.value) {
+        passwordConfirm.setCustomValidity('');
     } else {
-        passWordInputConfirm.setCustomValidity('');
+        passwordConfirm.setCustomValidity('Passwords do not match!');
     }
 }
+
+// invalid doesn't bubble - use capturing phase
+// form.addEventListener('invalid', event => {}, true);
+passwordShow.addEventListener('pointerdown', event => {
+    if (password.type === 'password') {
+        password.type = 'text';
+    } else {
+        password.type = 'password';
+    }
+});
+
+passwordConfirmShow.addEventListener('pointerdown', event => {
+    if (passwordConfirm.type === 'password') {
+        passwordConfirm.type = 'text';
+    } else {
+        passwordConfirm.type = 'password';
+    }
+});
