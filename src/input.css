@@ -12,12 +12,11 @@
 }
 
 @layer base {
-
-    [type="text"],
-    [type="email"],
-    [type="tel"],
-    [type="password"] {
-        @apply mt-0.5 w-full rounded-md border-gray-300 shadow-sm invalid:border-red-500 invalid:text-red-500 invalid:placeholder-shown:border-gray-300 invalid:placeholder-shown:text-gray-900 focus:ring-1 invalid:focus:ring-red-500 invalid:placeholder-shown:focus:ring-indigo-500;
+    [type='text'],
+    [type='email'],
+    [type='tel'],
+    [type='password'] {
+        @apply block w-full rounded-md border border-gray-300 text-gray-900 shadow-sm outline-none ring-inset invalid:border-red-500 invalid:text-red-500 invalid:placeholder-shown:border-gray-300 invalid:placeholder-shown:text-gray-500 focus:ring-2 invalid:focus:ring-red-500 invalid:placeholder-shown:focus:ring-indigo-500;
     }
 
     label {
@@ -26,5 +25,9 @@
 
     svg {
         @apply stroke-[#301bc1] stroke-2;
+    }
+
+    [type='tel'] {
+        @apply focus:ring-2 focus:placeholder-shown:ring-indigo-500;
     }
 }
