@@ -35,3 +35,12 @@ src/input.css
 ```
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
+
+
+todo:
+show - hide password, dir="rtl" 
+css logical properties https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties
+border on tel is weird
+design
+chrome developer tools source order view
+sanitizer api
