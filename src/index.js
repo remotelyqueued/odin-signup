@@ -24,6 +24,7 @@ passwordShow.addEventListener('pointerdown', event => {
     } else {
         password.type = 'password';
     }
+    event.preventDefault();
 });
 
 passwordConfirmShow.addEventListener('pointerdown', event => {
@@ -32,4 +33,5 @@ passwordConfirmShow.addEventListener('pointerdown', event => {
     } else {
         passwordConfirm.type = 'password';
     }
+    event.preventDefault();
 });
