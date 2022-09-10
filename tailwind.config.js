@@ -10,9 +10,14 @@ module.exports = {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: '#301bc1',
+                primary: '#30022a',
+                warning: '#ff0013'
             },
         },
     },
     plugins: [require('@tailwindcss/forms')],
 };
+
+// 30022a burgundy - red
+// 301bc1 blue purple
+// pink-500 - warning
