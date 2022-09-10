@@ -38,6 +38,6 @@
     }
 
     svg {
-        @apply stroke-primary stroke-2;
+        @apply stroke-primary stroke-1;
     }
 }
