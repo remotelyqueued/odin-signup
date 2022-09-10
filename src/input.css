@@ -27,17 +27,26 @@
     [multiple],
     textarea,
     select {
-        @apply mt-0.5 block w-full rounded-md border-gray-300 text-gray-700 shadow-sm;
+        @apply mt-0.5 block w-full rounded-md border-gray-300 text-sm text-gray-700 placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
     }
     /*   
+
+
+    invalid:border-pink-500 
+    invalid:text-pink-600
+    
+    focus:invalid:border-pink-500 
+    focus:invalid:ring-pink-500
+
+
     ring-offset
 
-    invalid:focus:ring-red-500
+    invalid:ring:red
     invalid:border-red-500 
     invalid:text-red-500
 
-    invalid:placeholder-shown:text-gray-500
-    invalid:placeholder-shown:focus:ring-indigo-500
+    invalid:placeholder-shown:text-gray-700
+    invalid:placeholder-shown:focus:ring-primary
     invalid:placeholder-shown:border-gray-300
     */
 
@@ -46,6 +55,6 @@
     }
 
     svg {
-        @apply stroke-[#301bc1] stroke-2;
+        @apply stroke-primary stroke-2;
     }
 }
