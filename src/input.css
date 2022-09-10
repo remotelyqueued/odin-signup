@@ -12,10 +12,6 @@
 }
 
 @layer base {
-    [type='tel'] {
-        @apply appearance-none;
-    }
-
     [type='text'],
     [type='email'],
     [type='url'],
@@ -31,26 +27,14 @@
     [multiple],
     textarea,
     select {
-        @apply block w-full rounded-md shadow-sm focus-ring-2 ring-2;
+        @apply mt-0.5 block w-full rounded-md border-gray-300 text-gray-700 shadow-sm;
     }
-
-    [type='checkbox'],
-    [type='radio'] {
-        @apply rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 focus:ring-offset-0;
-    }
-
-    /* 
-    
-    text-gray-900
-    border-gray-300
-
+    /*   
     ring-offset
-
 
     invalid:focus:ring-red-500
     invalid:border-red-500 
     invalid:text-red-500
-
 
     invalid:placeholder-shown:text-gray-500
     invalid:placeholder-shown:focus:ring-indigo-500
@@ -63,9 +47,5 @@
 
     svg {
         @apply stroke-[#301bc1] stroke-2;
-    }
-
-    [type='tel'] {
-        @apply focus:ring-2 focus:placeholder-shown:ring-indigo-500;
     }
 }
