@@ -18,6 +18,6 @@ module.exports = {
     plugins: [require('@tailwindcss/forms')],
 };
 
-// 30022a burgundy - red
-// 301bc1 blue purple
-// pink-500 - warning
+// 30022a burgundy 
+// 301bc1 
+// pink-500

@@ -1,12 +1,13 @@
 # odin-signup
 
+simple sign up form
+
 ## tailwindcss
 
 ```
 npm install -D tailwindcss
 npm install -D prettier-plugin-tailwindcss
 npm install -D @tailwindcss/forms
-npm install -D @tailwindcss/typography
 
 npx tailwindcss init
 ```
@@ -20,7 +21,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms')],
 }
 ```
 
@@ -35,5 +36,3 @@ src/input.css
 ```
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
-
-todo: design!
