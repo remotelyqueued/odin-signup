@@ -18,16 +18,23 @@ function validatePassword(event) {
 
 // invalid doesn't bubble - use capturing phase
 // form.addEventListener('invalid', event => {}, true);
+const passwordSVG = document.querySelectorAll('.password-show > svg');
+
 passwordShow.addEventListener('pointerdown', event => {
+    passwordSVG.forEach(button => button.classList.toggle('hidden'));
     if (password.type === 'password') {
         password.type = 'text';
     } else {
         password.type = 'password';
     }
-    event.preventDefault();
+    event.preventDefault(); // prevents double click selecting page
 });
 
+const passwordConfirmSVG = document.querySelectorAll(
+    '.password-confirm-show > svg'
+);
 passwordConfirmShow.addEventListener('pointerdown', event => {
+    passwordConfirmSVG.forEach(button => button.classList.toggle('hidden'));
     if (passwordConfirm.type === 'password') {
         passwordConfirm.type = 'text';
     } else {
