@@ -36,3 +36,11 @@ src/input.css
 ```
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
+
+todo: 
+
+credit artist - picture
+
+design
+
+add placeholder text?
