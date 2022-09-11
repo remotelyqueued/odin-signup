@@ -39,8 +39,8 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 todo: 
 
-credit artist - picture
-
 design
 
-add placeholder text?
+add placeholder text last name
+
+artist credit
